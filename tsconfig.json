@@ -15,4 +15,8 @@
     "rootDir": "src",
     "moduleResolution": "node"
   },
+  "include": [
+    "src",
+    "vite.config.js"
+  ]
 }
