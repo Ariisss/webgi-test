@@ -12,11 +12,9 @@
       "es6",
       "dom"
     ],
-    "rootDir": "src",
     "moduleResolution": "node"
   },
   "include": [
-    "src",
-    "vite.config.js"
+    "src"
   ]
 }
