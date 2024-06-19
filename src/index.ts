@@ -20,6 +20,7 @@ import {
     ITexture, TweakpaneUiPlugin, AssetManagerBasicPopupPlugin, CanvasSnipperPlugin,
 
     IViewerPlugin, FileTransferPlugin,
+    ARPlugin
 
     // Color, // Import THREE.js internals
     // Texture, // Import THREE.js internals
@@ -53,17 +54,20 @@ async function setupViewer(){
     await addBasePlugins(viewer) // check the source: https://codepen.io/repalash/pen/JjLxGmy for the list of plugins added.
 
     // Add a popup(in HTML) with download progress when any asset is downloading.
-    await viewer.addPlugin(AssetManagerBasicPopupPlugin)
+    // await viewer.addPlugin(AssetManagerBasicPopupPlugin)
 
     // Required for downloading files from the UI
-    await viewer.addPlugin(FileTransferPlugin)
+    // await viewer.addPlugin(FileTransferPlugin)
 
     // Add more plugins not available in base, like CanvasSnipperPlugin which has helpers to download an image of the canvas.
-    await viewer.addPlugin(CanvasSnipperPlugin)
+    // await viewer.addPlugin(CanvasSnipperPlugin)
+
+    // Add AR plugin
+    await viewer.addPlugin(ARPlugin)
 
     // Import and add a GLB file.
-    await viewer.load("./assets/classic-watch.glb")
-
+    await viewer.load("./assets/Bracelet AR Model 08.glb")
+    
     // Load an environment map if not set in the glb file
     // await viewer.setEnvironmentMap("./assets/environment.hdr");
 
